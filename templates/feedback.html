@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}All Feedback{% endblock %}
+
+{% block content %}
+    <h1 class='display-3 text-center'>All Feedback</h1>
+    <ol>
+        {% for f in feedback %}
+            <li>
+                <b>{{f.user.username}}</b>: <u>{{f.title}}</u> - {{f.content}}
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock %}
