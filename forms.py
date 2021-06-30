@@ -6,7 +6,7 @@ import email_validator
 class RegisterForm(FlaskForm):
     username = StringField('Username', validators=[InputRequired()])
     password = PasswordField('Password', validators=[InputRequired()])
-    email = StringField('User email', validators=[InputRequired(), Email()])
+    email = StringField('User email', validators=[InputRequired(), Email(message='Must input a valid email!')])
     first_name = StringField('First name', validators=[InputRequired()])
     last_name = StringField('Last name', validators=[InputRequired()])
 
